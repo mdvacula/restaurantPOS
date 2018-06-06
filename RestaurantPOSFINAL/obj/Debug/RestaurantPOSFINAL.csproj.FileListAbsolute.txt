@@ -1,0 +1,35 @@
+c:\users\matthew\documents\visual studio 2012\Projects\RestaurantPOSFINAL\RestaurantPOSFINAL\bin\Debug\RestaurantPOSFINAL.exe.config
+c:\users\matthew\documents\visual studio 2012\Projects\RestaurantPOSFINAL\RestaurantPOSFINAL\bin\Debug\RestaurantDatabase.mdf
+c:\users\matthew\documents\visual studio 2012\Projects\RestaurantPOSFINAL\RestaurantPOSFINAL\bin\Debug\RestaurantDatabase_log.ldf
+c:\users\matthew\documents\visual studio 2012\Projects\RestaurantPOSFINAL\RestaurantPOSFINAL\bin\Debug\RestaurantDatamdf.mdf
+c:\users\matthew\documents\visual studio 2012\Projects\RestaurantPOSFINAL\RestaurantPOSFINAL\bin\Debug\RestaurantDatamdf_log.ldf
+c:\users\matthew\documents\visual studio 2012\Projects\RestaurantPOSFINAL\RestaurantPOSFINAL\bin\Debug\RestaurantPOSFINAL.exe
+c:\users\matthew\documents\visual studio 2012\Projects\RestaurantPOSFINAL\RestaurantPOSFINAL\bin\Debug\RestaurantPOSFINAL.pdb
+c:\users\matthew\documents\visual studio 2012\Projects\RestaurantPOSFINAL\RestaurantPOSFINAL\bin\Debug\EntityFramework.dll
+c:\users\matthew\documents\visual studio 2012\Projects\RestaurantPOSFINAL\RestaurantPOSFINAL\bin\Debug\EntityFramework.xml
+c:\users\matthew\documents\visual studio 2012\Projects\RestaurantPOSFINAL\RestaurantPOSFINAL\obj\Debug\RestaurantPOSFINAL.Properties.Resources.resources
+c:\users\matthew\documents\visual studio 2012\Projects\RestaurantPOSFINAL\RestaurantPOSFINAL\obj\Debug\RestaurantPOSFINAL.csproj.GenerateResource.Cache
+c:\users\matthew\documents\visual studio 2012\Projects\RestaurantPOSFINAL\RestaurantPOSFINAL\obj\Debug\RestaurantPOSFINAL.exe
+c:\users\matthew\documents\visual studio 2012\Projects\RestaurantPOSFINAL\RestaurantPOSFINAL\obj\Debug\RestaurantPOSFINAL.pdb
+c:\users\matthew\documents\visual studio 2012\Projects\RestaurantPOSFINAL\RestaurantPOSFINAL\obj\Debug\RestaurantPOSFINAL.AddProduct.resources
+c:\users\matthew\documents\visual studio 2012\Projects\RestaurantPOSFINAL\RestaurantPOSFINAL\obj\Debug\RestaurantPOSFINAL.Check.resources
+c:\users\matthew\documents\visual studio 2012\Projects\RestaurantPOSFINAL\RestaurantPOSFINAL\obj\Debug\RestaurantPOSFINAL.logIn.resources
+c:\users\matthew\documents\visual studio 2012\Projects\RestaurantPOSFINAL\RestaurantPOSFINAL\obj\Debug\RestaurantPOSFINAL.paymentPrompt.resources
+c:\users\matthew\documents\visual studio 2012\Projects\RestaurantPOSFINAL\RestaurantPOSFINAL\bin\Debug\RestaurantPOSFINAL.exe.CodeAnalysisLog.xml
+c:\users\matthew\documents\visual studio 2012\Projects\RestaurantPOSFINAL\RestaurantPOSFINAL\bin\Debug\RestaurantPOSFINAL.exe.lastcodeanalysissucceeded
+C:\Users\Matthew\Desktop\RestaurantPOSFINAL\RestaurantPOSFINAL\bin\Debug\RestaurantPOSFINAL.exe.config
+C:\Users\Matthew\Desktop\RestaurantPOSFINAL\RestaurantPOSFINAL\obj\Debug\RestaurantPOSFINAL.exe
+C:\Users\Matthew\Desktop\RestaurantPOSFINAL\RestaurantPOSFINAL\obj\Debug\RestaurantPOSFINAL.pdb
+C:\Users\Matthew\Desktop\RestaurantPOSFINAL\RestaurantPOSFINAL\bin\Debug\RestaurantDatabase.mdf
+C:\Users\Matthew\Desktop\RestaurantPOSFINAL\RestaurantPOSFINAL\bin\Debug\RestaurantDatabase_log.ldf
+C:\Users\Matthew\Desktop\RestaurantPOSFINAL\RestaurantPOSFINAL\bin\Debug\RestaurantDatamdf.mdf
+C:\Users\Matthew\Desktop\RestaurantPOSFINAL\RestaurantPOSFINAL\bin\Debug\RestaurantDatamdf_log.ldf
+C:\Users\Matthew\Desktop\RestaurantPOSFINAL\RestaurantPOSFINAL\bin\Debug\EntityFramework.dll
+C:\Users\Matthew\Desktop\RestaurantPOSFINAL\RestaurantPOSFINAL\bin\Debug\EntityFramework.xml
+C:\Users\Matthew\Desktop\RestaurantPOSFINAL\RestaurantPOSFINAL\obj\Debug\RestaurantPOSFINAL.csprojResolveAssemblyReference.cache
+C:\Users\Matthew\Desktop\RestaurantPOSFINAL\RestaurantPOSFINAL\obj\Debug\RestaurantPOSFINAL.AddProduct.resources
+C:\Users\Matthew\Desktop\RestaurantPOSFINAL\RestaurantPOSFINAL\obj\Debug\RestaurantPOSFINAL.Check.resources
+C:\Users\Matthew\Desktop\RestaurantPOSFINAL\RestaurantPOSFINAL\obj\Debug\RestaurantPOSFINAL.logIn.resources
+C:\Users\Matthew\Desktop\RestaurantPOSFINAL\RestaurantPOSFINAL\obj\Debug\RestaurantPOSFINAL.paymentPrompt.resources
+C:\Users\Matthew\Desktop\RestaurantPOSFINAL\RestaurantPOSFINAL\obj\Debug\RestaurantPOSFINAL.Properties.Resources.resources
+C:\Users\Matthew\Desktop\RestaurantPOSFINAL\RestaurantPOSFINAL\obj\Debug\RestaurantPOSFINAL.csproj.GenerateResource.Cache

@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RestaurantDataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="RestaurantDataModelStoreContainer">
+          <EntitySet Name="CheckIDtbl" EntityType="RestaurantDataModel.Store.CheckIDtbl" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CheckItemTbl" EntityType="RestaurantDataModel.Store.CheckItemTbl" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MenuCategories" EntityType="RestaurantDataModel.Store.MenuCategories" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MenuItemTbl" EntityType="RestaurantDataModel.Store.MenuItemTbl" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_CheckID" Association="RestaurantDataModel.Store.FK_CheckID">
+            <End Role="CheckIDtbl" EntitySet="CheckIDtbl" />
+            <End Role="CheckItemTbl" EntitySet="CheckItemTbl" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ItemCategory" Association="RestaurantDataModel.Store.FK_ItemCategory">
+            <End Role="MenuCategories" EntitySet="MenuCategories" />
+            <End Role="MenuItemTbl" EntitySet="MenuItemTbl" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ItemID" Association="RestaurantDataModel.Store.FK_ItemID">
+            <End Role="MenuItemTbl" EntitySet="MenuItemTbl" />
+            <End Role="CheckItemTbl" EntitySet="CheckItemTbl" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CheckIDtbl">
+          <Key>
+            <PropertyRef Name="CheckNum" />
+          </Key>
+          <Property Name="CheckNum" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CheckDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CheckItemTbl">
+          <Key>
+            <PropertyRef Name="CheckItemID" />
+          </Key>
+          <Property Name="CheckItemID" Type="int" Nullable="false" />
+          <Property Name="CheckNum" Type="int" Nullable="false" />
+          <Property Name="ItemID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="MenuCategories">
+          <Key>
+            <PropertyRef Name="Category" />
+          </Key>
+          <Property Name="Category" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MenuItemTbl">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ItemCategory" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Price" Type="money" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_CheckID">
+          <End Role="CheckIDtbl" Type="RestaurantDataModel.Store.CheckIDtbl" Multiplicity="1" />
+          <End Role="CheckItemTbl" Type="RestaurantDataModel.Store.CheckItemTbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CheckIDtbl">
+              <PropertyRef Name="CheckNum" />
+            </Principal>
+            <Dependent Role="CheckItemTbl">
+              <PropertyRef Name="CheckNum" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ItemCategory">
+          <End Role="MenuCategories" Type="RestaurantDataModel.Store.MenuCategories" Multiplicity="1" />
+          <End Role="MenuItemTbl" Type="RestaurantDataModel.Store.MenuItemTbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MenuCategories">
+              <PropertyRef Name="Category" />
+            </Principal>
+            <Dependent Role="MenuItemTbl">
+              <PropertyRef Name="ItemCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ItemID">
+          <End Role="MenuItemTbl" Type="RestaurantDataModel.Store.MenuItemTbl" Multiplicity="1" />
+          <End Role="CheckItemTbl" Type="RestaurantDataModel.Store.CheckItemTbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MenuItemTbl">
+              <PropertyRef Name="ItemID" />
+            </Principal>
+            <Dependent Role="CheckItemTbl">
+              <PropertyRef Name="ItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RestaurantDataModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="RestaurantDatabaseEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="CheckIDtbls" EntityType="RestaurantDataModel.CheckIDtbl" />
+          <EntitySet Name="CheckItemTbls" EntityType="RestaurantDataModel.CheckItemTbl" />
+          <EntitySet Name="MenuCategories" EntityType="RestaurantDataModel.MenuCategory" />
+          <EntitySet Name="MenuItemTbls" EntityType="RestaurantDataModel.MenuItemTbl" />
+          <AssociationSet Name="FK_CheckID" Association="RestaurantDataModel.FK_CheckID">
+            <End Role="CheckIDtbl" EntitySet="CheckIDtbls" />
+            <End Role="CheckItemTbl" EntitySet="CheckItemTbls" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ItemID" Association="RestaurantDataModel.FK_ItemID">
+            <End Role="MenuItemTbl" EntitySet="MenuItemTbls" />
+            <End Role="CheckItemTbl" EntitySet="CheckItemTbls" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ItemCategory" Association="RestaurantDataModel.FK_ItemCategory">
+            <End Role="MenuCategories" EntitySet="MenuCategories" />
+            <End Role="MenuItemTbl" EntitySet="MenuItemTbls" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CheckIDtbl">
+          <Key>
+            <PropertyRef Name="CheckNum" />
+          </Key>
+          <Property Name="CheckNum" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CheckDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="CheckItemTbls" Relationship="RestaurantDataModel.FK_CheckID" FromRole="CheckIDtbl" ToRole="CheckItemTbl" />
+        </EntityType>
+        <EntityType Name="CheckItemTbl">
+          <Key>
+            <PropertyRef Name="CheckItemID" />
+          </Key>
+          <Property Name="CheckItemID" Type="Int32" Nullable="false" />
+          <Property Name="CheckNum" Type="Int32" Nullable="false" />
+          <Property Name="ItemID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="CheckIDtbl" Relationship="RestaurantDataModel.FK_CheckID" FromRole="CheckItemTbl" ToRole="CheckIDtbl" />
+          <NavigationProperty Name="MenuItemTbl" Relationship="RestaurantDataModel.FK_ItemID" FromRole="CheckItemTbl" ToRole="MenuItemTbl" />
+        </EntityType>
+        <EntityType Name="MenuCategory">
+          <Key>
+            <PropertyRef Name="Category" />
+          </Key>
+          <Property Name="Category" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="MenuItemTbls" Relationship="RestaurantDataModel.FK_ItemCategory" FromRole="MenuCategories" ToRole="MenuItemTbl" />
+        </EntityType>
+        <EntityType Name="MenuItemTbl">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemCategory" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <NavigationProperty Name="CheckItemTbls" Relationship="RestaurantDataModel.FK_ItemID" FromRole="MenuItemTbl" ToRole="CheckItemTbl" />
+          <NavigationProperty Name="MenuCategory" Relationship="RestaurantDataModel.FK_ItemCategory" FromRole="MenuItemTbl" ToRole="MenuCategories" />
+        </EntityType>
+        <Association Name="FK_CheckID">
+          <End Role="CheckIDtbl" Type="RestaurantDataModel.CheckIDtbl" Multiplicity="1" />
+          <End Role="CheckItemTbl" Type="RestaurantDataModel.CheckItemTbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CheckIDtbl">
+              <PropertyRef Name="CheckNum" />
+            </Principal>
+            <Dependent Role="CheckItemTbl">
+              <PropertyRef Name="CheckNum" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ItemID">
+          <End Role="MenuItemTbl" Type="RestaurantDataModel.MenuItemTbl" Multiplicity="1" />
+          <End Role="CheckItemTbl" Type="RestaurantDataModel.CheckItemTbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MenuItemTbl">
+              <PropertyRef Name="ItemID" />
+            </Principal>
+            <Dependent Role="CheckItemTbl">
+              <PropertyRef Name="ItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ItemCategory">
+          <End Role="MenuCategories" Type="RestaurantDataModel.MenuCategory" Multiplicity="1" />
+          <End Role="MenuItemTbl" Type="RestaurantDataModel.MenuItemTbl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MenuCategories">
+              <PropertyRef Name="Category" />
+            </Principal>
+            <Dependent Role="MenuItemTbl">
+              <PropertyRef Name="ItemCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RestaurantDataModelStoreContainer" CdmEntityContainer="RestaurantDatabaseEntities">
+          <EntitySetMapping Name="CheckIDtbls">
+            <EntityTypeMapping TypeName="RestaurantDataModel.CheckIDtbl">
+              <MappingFragment StoreEntitySet="CheckIDtbl">
+                <ScalarProperty Name="CheckNum" ColumnName="CheckNum" />
+                <ScalarProperty Name="CheckDate" ColumnName="CheckDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CheckItemTbls">
+            <EntityTypeMapping TypeName="RestaurantDataModel.CheckItemTbl">
+              <MappingFragment StoreEntitySet="CheckItemTbl">
+                <ScalarProperty Name="CheckItemID" ColumnName="CheckItemID" />
+                <ScalarProperty Name="CheckNum" ColumnName="CheckNum" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MenuCategories">
+            <EntityTypeMapping TypeName="RestaurantDataModel.MenuCategory">
+              <MappingFragment StoreEntitySet="MenuCategories">
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MenuItemTbls">
+            <EntityTypeMapping TypeName="RestaurantDataModel.MenuItemTbl">
+              <MappingFragment StoreEntitySet="MenuItemTbl">
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="ItemCategory" ColumnName="ItemCategory" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

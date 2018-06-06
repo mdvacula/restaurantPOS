@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RestaurantDataModelStoreContainer" CdmEntityContainer="RestaurantDatabaseEntities">
+    <EntitySetMapping Name="CheckIDtbls">
+      <EntityTypeMapping TypeName="RestaurantDataModel.CheckIDtbl">
+        <MappingFragment StoreEntitySet="CheckIDtbl">
+          <ScalarProperty Name="CheckNum" ColumnName="CheckNum" />
+          <ScalarProperty Name="CheckDate" ColumnName="CheckDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CheckItemTbls">
+      <EntityTypeMapping TypeName="RestaurantDataModel.CheckItemTbl">
+        <MappingFragment StoreEntitySet="CheckItemTbl">
+          <ScalarProperty Name="CheckItemID" ColumnName="CheckItemID" />
+          <ScalarProperty Name="CheckNum" ColumnName="CheckNum" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuCategories">
+      <EntityTypeMapping TypeName="RestaurantDataModel.MenuCategory">
+        <MappingFragment StoreEntitySet="MenuCategories">
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuItemTbls">
+      <EntityTypeMapping TypeName="RestaurantDataModel.MenuItemTbl">
+        <MappingFragment StoreEntitySet="MenuItemTbl">
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="ItemCategory" ColumnName="ItemCategory" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
